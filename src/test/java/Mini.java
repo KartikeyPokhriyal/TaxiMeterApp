@@ -1,9 +1,7 @@
 public class Mini extends Cab {
 
-    double base_price;
-
     public Mini(double base_price) {
-        this.base_price = base_price;
+        super(base_price);
     }
 
     public double  calculateFare(double distance) {
@@ -15,7 +13,6 @@ public class Mini extends Cab {
         if(distance > 75) {
             return distance * 8;
         }
-        else
             return base_price;
     }
 }

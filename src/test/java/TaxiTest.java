@@ -22,4 +22,25 @@ public class TaxiTest {
         Cab cab = new Mini(50);
         assertEquals(360, cab.calculateFare(35), 0.001);
     }
+
+
+    @Test
+    public void shouldReturnThePriceForThreeKilometerOfASedanRide() {
+        Cab cab = new Sedan(80);
+        assertEquals(80, cab.calculateFare(5), 0.001);
+    }
+
+    @Test
+    public void shouldReturnThePriceForTenKilometerOfASedanRide() {
+        Cab cab = new Sedan(80);
+        assertEquals(164, cab.calculateFare(10), 0.001);
+    }
+
+    @Test
+    public void shouldReturnThePriceFor35KilometerOfAMSedanRide() {
+        Cab cab = new Sedan(80);
+        assertEquals(390, cab.calculateFare(35), 0.001);
+    }
+
+
 }
