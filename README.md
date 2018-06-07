@@ -1,0 +1,1 @@
+Taxi meter App calculates the fare for different tai types
