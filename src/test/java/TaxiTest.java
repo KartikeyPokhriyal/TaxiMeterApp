@@ -20,7 +20,7 @@ public class TaxiTest {
     @Test
     public void shouldReturnThePriceFor35KilometerOfAMiniRide() {
         Cab cab = new Mini(50);
-        assertEquals(360, cab.calculateFare(35), 0.001);
+        assertEquals(336, cab.calculateFare(35), 0.001);
     }
 
 
@@ -33,14 +33,32 @@ public class TaxiTest {
     @Test
     public void shouldReturnThePriceForTenKilometerOfASedanRide() {
         Cab cab = new Sedan(80);
-        assertEquals(164, cab.calculateFare(10), 0.001);
+        assertEquals(140, cab.calculateFare(10), 0.001);
     }
 
     @Test
     public void shouldReturnThePriceFor35KilometerOfAMSedanRide() {
         Cab cab = new Sedan(80);
-        assertEquals(390, cab.calculateFare(35), 0.001);
+        assertEquals(410, cab.calculateFare(35), 0.001);
     }
 
+    @Test
+    public void shouldReturnThePriceForThreeKilometerOfA_SUVRide() {
+        Cab cab = new SUV(100);
+
+        assertEquals(100, cab.calculateFare(3), 0.001);
+    }
+
+    @Test
+    public void shouldReturnThePriceForTenKilometerOfA_SUVRide() {
+        Cab cab = new SUV(100);
+        assertEquals(140, cab.calculateFare(10), 0.001);
+    }
+
+    @Test
+    public void shouldReturnThePriceFor35KilometerOfA_SUVRide() {
+        Cab cab = new SUV(100);
+        assertEquals(505, cab.calculateFare(35), 0.001);
+    }
 
 }

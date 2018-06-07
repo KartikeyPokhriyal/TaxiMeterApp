@@ -5,6 +5,5 @@ public abstract class Cab {
         this.base_price = base_price;
     }
 
-
     public abstract double calculateFare(double distance);
 }
